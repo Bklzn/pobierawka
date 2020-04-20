@@ -13,52 +13,60 @@ p{
 }
 #dark{
 	margin:180px 30px 10px;
+	backdrop-filter: blur(15px); 
+	border: 2px solid gray;
+	border-radius: 50px;  
+	width:100px;
+	text-align:center;
+	font-size:15px;
+
 	}
 .darkmode {
-  position: relative;
-  display: block;
-  width: 60px;
-  height: 34px;
-  padding:0;
+	position: relative;
+	display: block;
+	width: 60px;
+	height: 34px;
+	padding:0;
+	margin:auto;
 }
 .kulka {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 26px;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+	border-radius: 26px;
 }
 
 .kulka:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  border-radius:26px;
-  transition: .4s;
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	border-radius:26px;
+	transition: .4s;
 }
 
 input:checked + .kulka {
-  background-color: #2196F3;
+  	background-color: #2196F3;
 }
 
 input:focus + .kulka {
-  box-shadow: 0 0 1px #2196F3;
+  	box-shadow: 0 0 1px #2196F3;
 }
 
 input:checked + .kulka:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  	-webkit-transform: translateX(26px);
+  	-ms-transform: translateX(26px);
+  	transform: translateX(26px);
 }
 
 label{
@@ -72,18 +80,18 @@ label{
 	padding:20px 0;
 }
 .zwijane {
-  opacity: 0;
-  backdrop-filter: opacity(.0);
-  max-height: 0;
-  font-size: 0;
-  visibility: hidden;
-  transition: 0.75s ease;
+  	opacity: 0;
+  	backdrop-filter: opacity(.0);
+  	max-height: 0;
+  	font-size: 0;
+  	visibility: hidden;
+  	transition: 0.75s ease;
 }
 input:checked ~ .zwitek > .zwijane{
-  opacity:1;
-  font-size:inherit;
-  max-height:999em;
-  visibility: visible;
+	opacity:1;
+  	font-size:inherit;
+  	max-height:999em;
+  	visibility: visible;
 }
 ol,ul {
 	list-style: none;
@@ -127,10 +135,14 @@ iframe {
 	width: 100%;
 }
 #video{
+	display:none; /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 	margin:auto;
 	position:relative;
 	width:60%;
 	padding-top:33.75%;
+}
+iframe{
+	display:none; /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 }
 #glowna
 {
