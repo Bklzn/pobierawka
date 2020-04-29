@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="PL-pl">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Jak pobierać filmy</title>
-	<link rel="stylesheet" type="text/css" href="css.css">
+	<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-K4RCQLD');
+		</script>
+	<!-- End Google Tag Manager -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164527204-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-164527204-1');
+		</script>
+	<!--End Global site tag -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Jak pobierać filmy</title>
+		<link rel="stylesheet" type="text/css" href="css.css">
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4RCQLD"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<button id="buton">Dark Mode</button>
 <div id="glowna" >
-	<div id="dark">
-	<font>Dark Mode</font>
-	<label class="darkmode">
-		<input type="checkbox" onclick="motyw(checked)"/>
-		<span class="kulka"></span>
-	</label>
-	</div>
 	<div>
 		<input type="checkbox" id="przycisk1"/>
 		<div id="PC" class="zwitek">
@@ -34,8 +50,8 @@
 								<li>klikasz <b>Pobierz</b></li>
 							</ol>
 							<br>
-							<p>Nadal nie ogarniasz? <b>Włącz video poniżej</b></p>
-							<div id="video">
+							<p class="p-vid">Nadal nie ogarniasz? <b>Włącz video poniżej</b></p>
+							<div class="video">
 								<iframe src="https://www.youtube.com/embed/kA0q3ROAodg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</div>
 							<label>Już wkrótce</label>
@@ -53,19 +69,19 @@
 								<li>zamieniasz "<b>www</b>" na "<b>m</b>" i wciskasz enter</li>
 								<li>wciśnij <b>F12</b></li>
 								<li>W kodzie źródłowym znajdź elementy dotyczące odtwarzacza</li>
-								<font><div style="width:60px; height:90px; float:left;"></div><font color="red">&#9679; </font> W tym celu, kliknij <img src="f12.jpg" alt="ikona" height="20" style="position:relative; top:5px;"> znajdującą się w lewym górnym rogu narzędzia dla deweloperów.
-								</font><br>
-								<font><font color="red">&#9679; </font>Kliknij na pole z odtwarzaczem.</font><br>
-								<font><font color="red">&#9679; </font>Powiniem ci sie zaznaczyć <b>kod strony</b> związany z nim.
-								</font>
+								<ul>
+									<li> W tym celu, kliknij <img src="f12.jpg" alt="ikona" height="20" style="position:relative; top:5px;"> znajdującą się w lewym górnym rogu narzędzia dla deweloperów.</li>
+									<li> Kliknij na pole z odtwarzaczem.</li>
+									<li> Powinien ci sie zaznaczyć <b>kod strony</b> związany z nim.</li>
+								</ul>
 								<li>Znajdź na zaznaczonym tekście <b>controlslist=nodownload</b></li>
 								<li>Usuń <b>nodownload</b> i wciśnij enter</li>
 								<li>W odtwarzaczu klikasz na <img src="kropeczki.jpg" alt="3 kropeczki" height="20" style="position:relative; top:5px;"></li>
 								<li>klikasz <b>Pobierz</b></li>
 							</ol>
 							<br>
-							<p>Nadal nie ogarniasz? <b>Włącz video poniżej</b></p>
-							<div id="video">
+							<p class="p-vid">Nadal nie ogarniasz? <b>Włącz video poniżej</b></p>
+							<div class="video">
 								<iframe src="https://www.youtube.com/embed/kA0q3ROAodg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</div>
 							<label>Już wkrótce</label>
@@ -87,8 +103,8 @@
 								<li>klikasz <b>Pobierz</b></li>
 							</ol>
 							<br>
-							<p>Nadal nie ogarniasz? <b>Włącz video poniżej</b></p>
-							<div id="video">
+							<p class="p-vid">Nadal nie ogarniasz? <b>Włącz video poniżej</b></p>
+							<div class="video">
 								<iframe src="https://www.youtube.com/embed/kA0q3ROAodg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</div>
 							<label>Już wkrótce</label>
@@ -124,9 +140,10 @@
 						<div class="zwijane">
 							<ol>
 								<li>Kopiujesz link posta</li>
-								<font><div style="width:60px; height:30px; float:left;"></div><font color="red">&#9679; </font>W górnym prawym rogu wciśnij ikonę opcji</font><br>
-								<font><font color="red">&#9679; </font>Wciśnij <b>Kopiuj link</b></font>
-								
+								<ul>
+									<li> W górnym prawym rogu wciśnij ikonę opcji</li>
+									<li> Wciśnij <b>Kopiuj link</b></li>
+								</ul>
 								<li>Otwierasz przeglądarkę</li>
 								<li>Wklejasz go w nowej karcie</li>
 								<li>Zamieniasz "<b>www</b>" na "<b>mbasic</b>" lub "<b>d</b>" i klikasz enter</li>
@@ -136,8 +153,8 @@
 								<li>klikasz <b>Pobierz</b></li>
 							</ol>
 							<br>
-							<p>Nadal nie ogarniasz? <b>Włącz video poniżej</b></p>
-							<div id="video">
+							<p class="p-vid">Nadal nie ogarniasz? <b>Włącz video poniżej</b></p>
+							<div class="video">
 								<iframe src="https://www.youtube.com/embed/kA0q3ROAodg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</div>
 							<label>Już wkrótce</label>
@@ -151,9 +168,10 @@
 						<div class="zwijane">
 							<ol>
 								<li>Kopiujesz link posta</li>
-								<font><div style="width:60px; height:30px; float:left;"></div><font color="red">&#9679; </font>W górnym prawym rogu wciśnij ikonę opcji</font><br>
-								<font><font color="red">&#9679; </font>Wciśnij <b>Kopiuj link</b></font>
-								
+								<ul>
+									<li> W górnym prawym rogu wciśnij ikonę opcji</li>
+									<li> Wciśnij <b>Kopiuj link</b></li>
+								</ul>
 								<li>Otwierasz przeglądarkę</li>
 								<li>Wklejasz go w nowej karcie</li>
 								<li>Zamieniasz "<b>www</b>" na "<b>mbasic</b>" lub "<b>d</b>" i klikasz enter</li>
@@ -164,7 +182,7 @@
 								<li>klikasz <b>Pobierz</b></li>
 							</ol>
 							<br>
-							<p>Nadal nie ogarniasz? <b>Włącz video poniżej</b></p>
+							<p class="p-vid">Nadal nie ogarniasz? <b>Włącz video poniżej</b></p>
 							<div id="video">
 								<iframe src="https://www.youtube.com/embed/kA0q3ROAodg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</div>
@@ -188,26 +206,13 @@
 		</div>
 	</div>
 </div>
+<div class="stopka">
+	<p>Strona powstała dla społeczności i należy do grupy <a href="https://www.facebook.com/groups/pobierawka2/" style="color:white; font-weight:bold;">Jak pobierać filmy -  sekcja jak K@#$a ściągać kontent z fb</a></p>
+	<p>Ta strona używa plików cookies w celu prowadzenia statystyk wyświetleń strony za pomocą Google Analytics oraz Google Tag Manager.</p>
+	<p>Wszelkie zbierane statystyki jest anonimowe i nie są udostępniane osobom trzecim.</p>
+	<p style="text-align:unset;margin:20px 0 0;">Ostatnia aktualizacja: 29:04:2020</p>
+	
+</div>
 </body>
-<script>
-	function motyw(a)
-	{
-		switch(a)
-		{
-			case true:
-			{
-				document.body.style.backgroundImage="url('tlo2.jpg')";
-				document.body.style.transition="1s";
-				document.body.style.color="white";
-				break;
-			}
-			default:
-			{
-				document.body.style.backgroundImage="url('tlo.jpg')";
-				document.body.style.transition="1s";
-				document.body.style.color="black";
-				break;
-			}
-		}
-	}</script>
+<script src="functions.js"></script>
 </html>
