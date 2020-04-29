@@ -3,7 +3,7 @@ const button = document.querySelector('#buton');
 const enableDarkMode=()=>{
 	document.body.classList.add("darkMode");
 	localStorage.setItem('dark',true);
-	document.getElementById("buton").innerHTML="White Mode";
+	document.getElementById("buton").innerHTML="Light Mode";
 }
 const disableDarkMode=()=>{
 	document.body.classList.remove("darkMode");
