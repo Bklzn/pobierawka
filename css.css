@@ -174,6 +174,10 @@ input:checked ~ .zwitek > .zwijane{
 	.stopka{
 		font-size:9px;
 		bottom:-87px;
+		transition: none;
+	}
+	.zwijane {
+		transition: none;
 	}
   
   
