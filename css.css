@@ -5,7 +5,9 @@ body
 	font-size:16px;
 	font-family:monospace;
 	background-image:url("tlo.jpg");
-	transition: 0.75s ease;
+    background-size:cover;           
+    background-repeat:repeat;
+	transition: 0.1s ease;
 }
 iframe {
 	position:absolute;
@@ -13,7 +15,7 @@ iframe {
 	left:0;
 	height:100%;
 	width: 100%;
-	display:none; /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+	/*display:none; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 }
 input{display:none;}
 label{
@@ -53,8 +55,10 @@ ul li::before {
 }
 .darkMode{
 	background:url("tlo2.jpg");
+	background-size:cover;           
+    background-repeat:repeat;
 	color:white;
-	transition: 0.75s ease;
+	transition: 0.1s ease;
 }
 input:checked ~ .stopka{
 	bottom:0;
@@ -81,7 +85,7 @@ input:checked ~ .stopka{
 	text-align:center;
 }
 .video{
-	display:none; /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+	/*display:none; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 	margin:auto;
 	position:relative;
 	width:60%;
@@ -96,11 +100,10 @@ input:checked ~ .stopka{
 }
 .zwijane {
   	opacity: 0;
-  	backdrop-filter: opacity(.0);
   	max-height: 0;
   	font-size: 0;
   	visibility: hidden;
-  	transition: 0.75s ease;
+  	transition: 0.1s ease;
 }
 input:checked ~ .zwitek > .zwijane{
 	opacity:1;
@@ -130,23 +133,43 @@ input:checked ~ .zwitek > .zwijane{
 	width:50%;
 	margin:100px auto 0;
 }
-#latwe, #trudne, #programy,#komentarze
+#latwe.lightElem,#latweA.lightElem, #trudne.lightElem, #programy.lightElem,#programyA.lightElem,#komentarze.lightElem,#komentarzeA.lightElem
 {
 	border: 2px solid #AAA;
 	border-radius: 50px;
 	margin:10px auto;
 	padding:20px 0;
 	width:95%;
-	background-color:rgba(0,0,0,0.3);
+	background-color:rgba(73, 0, 105,0.2);
 }
-#PC, #Android
+#latwe.darkElem,#latweA.darkElem, #trudne.darkElem, #programy.darkElem,#programyA.darkElem,#komentarze.darkElem,#komentarzeA.darkElem
+{
+	border: 2px solid #AAA;
+	border-radius: 50px;
+	margin:10px auto;
+	padding:20px 0;
+	width:95%;
+	background-color:rgba(73, 0, 105,0.5);
+}
+#PC.lightElem, #Android.lightElem
 {
 	border: 2px solid gray;
 	border-radius: 50px;
 	width:100%;
 	margin:10px auto;
 	padding:20px 0;
-	backdrop-filter: blur(15px);
+	background-color:rgba(255,255,255,0.5);
+	transition: 0.1s ease;
+}
+#PC.darkElem, #Android.darkElem
+{
+	border: 2px solid gray;
+	border-radius: 50px;
+	width:100%;
+	margin:10px auto;
+	padding:20px 0;
+	background-color:rgba(0,0,0,0.5);
+	transition: 0.1s ease;
 }
 @media screen and (max-width: 481px){
 
@@ -157,7 +180,7 @@ input:checked ~ .zwitek > .zwijane{
 	#glowna{
 		width:100%;
 	}
-	#latwe, #trudne, #programy,#komentarze
+	#latwe,#latweA #trudne, #programy,#programyA,#komentarze,#komentarzeA
 	{
 		font-size:15px;
 
@@ -179,6 +202,4 @@ input:checked ~ .zwitek > .zwijane{
 	.zwijane {
 		transition: none;
 	}
-  
-  
 }
