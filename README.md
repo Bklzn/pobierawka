@@ -1,1 +1,1 @@
-Przerwa Techniczna
+Pobierawka
